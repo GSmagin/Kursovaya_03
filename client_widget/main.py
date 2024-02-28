@@ -1,5 +1,7 @@
 from class_json import Operation
 from functions import operations_json
+# from functions import format_from_account
+
 
 transaction_list = []
 for json_object in operations_json:
@@ -21,6 +23,6 @@ for transaction in executed_transactions[:5]:
     print(f"Date: {transaction.date}")
     print(f"Amount: {transaction.operation_amount['amount']} {transaction.operation_amount['currency']['code']}")
     print(f"Description: {transaction.description}")
-    print(f"From: {transaction.from_account}")
+    print(f"From: {transaction.format_from_account()}")
     print(f"To: {transaction.to_account}")
     print("\n")
