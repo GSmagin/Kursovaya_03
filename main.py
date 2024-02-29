@@ -1,5 +1,5 @@
-from functions import sort_transactions
-from functions import print_check
+from src.functions import sort_transactions
+from src.functions import print_check
 
 
 def main():

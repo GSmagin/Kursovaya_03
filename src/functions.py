@@ -1,5 +1,5 @@
-from confing import operations_json
-from class_json import Operation
+from src.confing import operations_json
+from src.class_json import Operation
 
 
 def sort_transactions(limit_operations=5) -> list[Operation]:
@@ -17,8 +17,8 @@ def sort_transactions(limit_operations=5) -> list[Operation]:
 
     # Сортировка списка транзакций по дате
     executed_transactions.sort(key=lambda x: x.date, reverse=True)
-
     return executed_transactions[:limit_operations]
+
 
 
 def print_check(transactions) -> None:
@@ -28,5 +28,4 @@ def print_check(transactions) -> None:
               f"\n{transaction.format_from_account()} -> {transaction.format_to_account()}"
               f"\n{transaction.operation_amount['amount']} {transaction.operation_amount['currency']['code']}"
               f"\n")
-
 

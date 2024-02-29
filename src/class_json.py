@@ -37,13 +37,20 @@ class Operation:
             if len(digits_from_account) == 16:
                 formatted_account = " ".join([digits_from_account[i:i + 4] for i in range(0, 16, 4)])
                 formatted_account = f"{formatted_account[:-12]}** **** {formatted_account[-4:]}"
-                return letters_from_account + ' ' + formatted_account
+
+                if letters_from_account:
+                    return letters_from_account + ' ' + formatted_account
+                else:
+                    return formatted_account
+
             elif len(digits_from_account) == 20:
                 formatted_account = digits_from_account[:-16]
                 formatted_account = f"**{formatted_account}"
                 return formatted_account
+
             else:
                 return self.from_account
+
         else:
             return f"Нет данных. Открытие вклада"
 
