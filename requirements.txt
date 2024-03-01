@@ -1,11 +1,1 @@
-Package        Version
--------------- -------
-exceptiongroup 1.2.0
-iniconfig      2.0.0
-packaging      23.2
-pip            23.3.2
-pluggy         1.4.0
-pytest         8.0.2
-setuptools     69.0.3
-tomli          2.0.1
-wheel          0.42.0
+pytest~=7.2.1
