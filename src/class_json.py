@@ -44,8 +44,8 @@ class Operation:
                     return formatted_account
 
             elif len(digits_from_account) == 20:
-                formatted_account = digits_from_account[:-16]
-                formatted_account = f"**{formatted_account}"
+                formatted_account = digits_from_account[:-13]
+                formatted_account = f"**{formatted_account[2:]}"
                 return formatted_account
 
             else:
@@ -59,8 +59,8 @@ class Operation:
         if self.to_account:
             digits_from_account = ''.join(c for c in self.to_account if c.isdigit())
             if len(digits_from_account) == 20:
-                formatted_account = digits_from_account[:-15]
-                formatted_account = f"**{formatted_account}"
+                formatted_account = digits_from_account[:-13]
+                formatted_account = f"**{formatted_account[2:]}"
                 return formatted_account
             else:
                 return self.to_account
