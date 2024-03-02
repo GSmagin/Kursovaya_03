@@ -1,15 +1,14 @@
-<p>&hellip;or create a new repository on the command line<br />
-echo &quot;# Kursovaya_03&quot; &gt;&gt; README.md<br />
-git init<br />
-git add README.md<br />
-git commit -m &quot;first commit&quot;<br />
-git branch -M main<br />
-git remote add origin git@github.com:GSmagin/Kursovaya_03.git<br />
-git push -u origin main</p>
+# Код для виджета «Операции по счетам»<br />
+Данная программа выводит на экран список из 5 последних выполненных клиентом операций в формате<br />
+<дата перевода> <описание перевода><br />
+<откуда> -> <куда><br />
+<сумма перевода> <валюта><br />
+Пример вывода для одной операции:<br />
+14.10.2018 Перевод организации<br />
+Visa Platinum 7000 79** **** 6361 -> Счет **9638<br />
+82771.72 руб.<br />
+<br />
+Данные подгружаются из JSON файла.<br />
 
-<p>&hellip;or push an existing repository from the command line<br />
-git remote add origin git@github.com:GSmagin/Kursovaya_03.git<br />
-git branch -M main<br />
-git push -u origin main</p>
-</body>
-</html>
+
+
