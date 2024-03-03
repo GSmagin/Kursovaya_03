@@ -58,15 +58,26 @@ class Operation:
         """Маскирует номер счета в формате **XXXX"""
         if self.to_account:
             digits_from_account = ''.join(c for c in self.to_account if c.isdigit())
-            if len(digits_from_account) == 20:
+            letters_from_account = ''.join(c for c in self.to_account if c.isalpha())
+            if len(digits_from_account) == 16:
+                formatted_account = " ".join([digits_from_account[i:i + 4] for i in range(0, 16, 4)])
+                formatted_account = f"{formatted_account[:-12]}** **** {formatted_account[-4:]}"
+
+                if letters_from_account:
+                    return letters_from_account + ' ' + formatted_account
+                else:
+                    return formatted_account
+
+            elif len(digits_from_account) == 20:
                 formatted_account = digits_from_account[:-13]
                 formatted_account = f"**{formatted_account[2:]}"
                 return formatted_account
+
             else:
                 return self.to_account
-        else:
-            return f"Нет данных"
 
+        else:
+            return f"Нет данных."
 
 
 
