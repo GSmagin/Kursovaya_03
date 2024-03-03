@@ -124,7 +124,7 @@ def test_format_to_account(coll):
                    "**38303",
                    "**77661",
                    "h8g7f6e5d4c3b2a1",
-                   "Нет данных"]
+                   "Нет данных."]
     i = 0
     for data_coll in coll:
         transaction = Operation(data_coll)
