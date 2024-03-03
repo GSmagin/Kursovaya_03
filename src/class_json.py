@@ -76,8 +76,7 @@ class Operation:
             else:
                 return self.to_account
 
+
         else:
             return f"Нет данных."
-
-
 
