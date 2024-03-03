@@ -108,7 +108,7 @@ def test_date():
 def test_format_from_account(coll):
     coll_result = ["Maestro 1596 83** **** 5199",
                    "7158 30** **** 6758",
-                   "**10683",
+                   "Счет **10683",
                    "a1b2c3d4e5f6g7h8",
                    "Нет данных. Открытие вклада"]
     i = 0
@@ -120,9 +120,9 @@ def test_format_from_account(coll):
 
 
 def test_format_to_account(coll):
-    coll_result = ["**68647",
-                   "**38303",
-                   "**77661",
+    coll_result = ["Счет **68647",
+                   "Счет **38303",
+                   "Счет **77661",
                    "h8g7f6e5d4c3b2a1",
                    "Нет данных."]
     i = 0
