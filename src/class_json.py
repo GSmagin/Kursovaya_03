@@ -44,7 +44,7 @@ class Operation:
                     return formatted_account
 
             elif len(digits_from_account) == 20:
-                formatted_account = digits_from_account[:-13]
+                formatted_account = digits_from_account[:-14]
                 formatted_account = letters_from_account + ' ' + f"**{formatted_account[2:]}"
                 return formatted_account
 
@@ -69,7 +69,7 @@ class Operation:
                     return formatted_account
 
             elif len(digits_from_account) == 20:
-                formatted_account = digits_from_account[:-13]
+                formatted_account = digits_from_account[:-14]
                 formatted_account = letters_from_account + ' ' + f"**{formatted_account[2:]}"
                 return formatted_account
 
