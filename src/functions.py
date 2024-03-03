@@ -32,7 +32,7 @@ def format_secret_account(account):
         return ""
 
 
-def sort_transactions(limit_operations=5, data_json=open_json_file()) -> list[Operation]:
+def sort_transactions(limit_operations, data_json=open_json_file()) -> list[Operation]:
     """Сортирует полученные данные из класса Operation по ключу state = "EXECUTED"
     а также производит сортировку даты по убыванию"""
     transaction_list = []
