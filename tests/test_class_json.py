@@ -133,7 +133,5 @@ def test_format_to_account(coll):
         i += 1
 
 
-# Добавьте другие тесты по необходимости
-
 if __name__ == "__main__":
     pytest.main()
