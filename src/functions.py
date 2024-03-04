@@ -10,6 +10,7 @@ def open_json_file(dir_path=dir_path_json):
 
 
 def format_secret_account(account):
+    """Маскирует номер карты в формате XXXX XX** **** XXXX и счета в формате **XXXX"""
     if account:
         digits_from_account = ''.join(c for c in account if c.isdigit())
         letters_from_account = ''.join(c for c in account if c.isalpha())
