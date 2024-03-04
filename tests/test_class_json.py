@@ -2,6 +2,7 @@ import pytest
 from src.class_json import Operation
 from src.functions import format_secret_account
 
+
 @pytest.fixture
 def coll():
     return [
@@ -105,7 +106,7 @@ def test_date():
     assert formatted_account == "01.01.2022"
 
 
-def test_format_from_account(coll):
+def test_format_secret_account_from_account(coll):
     coll_result = ["Maestro 1596 83** **** 5199",
                    "7158 30** **** 6758",
                    "Счет **1068",
@@ -119,7 +120,7 @@ def test_format_from_account(coll):
         i += 1
 
 
-def test_format_to_account(coll):
+def test_format_secret_account_to_account(coll):
     coll_result = ["Счет **6864",
                    "Счет **3830",
                    "Счет **7766",
